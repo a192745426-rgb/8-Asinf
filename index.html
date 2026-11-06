@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>46-umumiy oʻrta taʼlim maktabi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:wght@400;600&display=swap">
+<style>
+:root{--bg:#f6f4ee;--ink:#17233a;--muted:#55607a;--card:#fff;--line:#d9d6cb;--brand:#1c3d6e;--onbrand:#fff;--accent:#f0b429;--board:#1f4d3f;--onboard:#f2f6f3;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--ink:#e8ecf5;--muted:#a3adc4;--card:#172034;--line:#2a3550;--brand:#8fb4ee;--onbrand:#0f1624;--accent:#f0b429;--board:#173a30;--onboard:#e6f1ec;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1624;--ink:#e8ecf5;--muted:#a3adc4;--card:#172034;--line:#2a3550;--brand:#8fb4ee;--onbrand:#0f1624;--accent:#f0b429;--board:#173a30;--onboard:#e6f1ec;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Literata,Georgia,serif}
+h1,h2,h3,.logo,nav a,.btn{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo b{background:var(--brand);color:var(--onbrand);padding:2px 10px;border-radius:6px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+section{max-width:1080px;margin:auto;padding:72px 20px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-top:56px}
+h1{font-size:clamp(34px,5.4vw,60px);line-height:1.05;margin:0 0 18px;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(26px,3.6vw,38px);margin:0 0 28px;letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btn{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;background:var(--brand);color:var(--onbrand)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+.plate{background:var(--board);color:var(--onboard);border-radius:14px;padding:34px 28px;text-align:center;border:10px solid #b88a4a;box-shadow:inset 0 0 0 2px rgba(255,255,255,.12)}
+.plate .n{font:800 clamp(110px,18vw,190px)/.9 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em}
+.plate p{margin:10px 0 0;font-size:16px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 16px}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts span{color:var(--muted)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--line)}
+th{font-family:"Bricolage Grotesque",sans-serif;background:var(--brand);color:var(--onbrand)}
+tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+.news time{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+.contact{background:var(--brand);color:var(--onbrand);max-width:none}
+.contact .in{max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact a{color:inherit}
+.contact dl{margin:0}.contact dt{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;margin-top:14px}.contact dd{margin:0}
+footer{text-align:center;padding:24px 20px;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:16px}
+.msg{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:24px 28px;margin-bottom:28px}
+.msg p{margin:0 0 12px}.msg p:last-child{margin:0}
+.note{color:var(--muted);font-size:15px}
+.tl{list-style:none;margin:0 0 0 8px;padding:0;border-left:3px solid var(--brand)}
+.tl li{position:relative;padding:0 0 22px 24px}
+.tl li::before{content:"";position:absolute;left:-12px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl b,.steps b{display:block;font-family:"Bricolage Grotesque",sans-serif}
+.steps{counter-reset:s;list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--onbrand);font:700 17px "Bricolage Grotesque",sans-serif;margin-bottom:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-family:"Bricolage Grotesque",sans-serif;font-weight:700}
+details p{margin:10px 0 0;color:var(--muted)}
+@media (max-width:760px){.hero,.about,.contact .in{grid-template-columns:1fr}section{padding:52px 20px}.btn.alt{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#top"><b>46</b> maktab</a>
+<nav><a href="#haqida">Maktab haqida</a><a href="#sinflar">Taʼlim</a><a href="#jadval">Dars jadvali</a><a href="#yangilik">Yangiliklar</a><a href="#fanlar">Fanlar</a><a href="#rahbariyat">Rahbariyat</a><a href="#qabul">Qabul</a><a href="#aloqa">Aloqa</a></nav>
+</div></header>
+
+<section class="hero" id="top">
+<div>
+<h1>46-umumiy oʻrta taʼlim maktabi</h1>
+<p class="lead">Bolalar bilim oladigan, oʻz yoʻlini topadigan va ustozlari bilan birga oʻsadigan maktab. Qabul, dars jadvali va yangiliklar shu sahifada.</p>
+<a class="btn" href="#aloqa">Qabul boʻyicha aloqa</a><a class="btn alt" href="#jadval">Dars jadvali</a>
+</div>
+<div class="plate" aria-label="46-maktab"><div class="n">46</div><p>umumiy oʻrta taʼlim maktabi</p></div>
+</section>
+
+<section id="haqida">
+<h2>Maktab haqida</h2>
+<div class="about">
+<div>
+<p>46-maktab oʻquvchilarga zamonaviy dasturga mos mustahkam bilim beradi va ularni hayotga tayyorlaydi. Bizda har bir bola eʼtibordan chetda qolmaydi.</p>
+<p>Oʻqituvchilar jamoasi darslarni qiziqarli oʻtkazish, sinfdan tashqari toʻgarak va tadbirlarni rivojlantirish ustida ishlaydi.</p>
+</div>
+<ul class="facts">
+<li><span>Tashkil etilgan yili</span><strong>[yil]</strong></li>
+<li><span>Oʻquvchilar soni</span><strong>[son]</strong></li>
+<li><span>Oʻqituvchilar soni</span><strong>[son]</strong></li>
+<li><span>Taʼlim tili</span><strong>[til]</strong></li>
+</ul>
+</div>
+</section>
+
+<section id="sinflar">
+<h2>Taʼlim va toʻgaraklar</h2>
+<div class="grid">
+<div class="card"><h3>Boshlangʻich sinflar</h3><p>1–4-sinflar: oʻqish, yozish, hisoblash va oʻrganishga qiziqish.</p></div>
+<div class="card"><h3>Yuqori sinflar</h3><p>5–9-sinflar: fanlar boʻyicha chuqur bilim va mustaqil fikrlash.</p></div>
+<div class="card"><h3>Oʻrta maxsus tayyorgarlik</h3><p>10–11-sinflar: kasb tanlash va oliy taʼlimga tayyorgarlik.</p></div>
+<div class="card"><h3>Toʻgaraklar</h3><p>Sport, rasm, informatika, chet tillari va boshqa yoʻnalishlar.</p></div>
+</div>
+</section>
+
+<section id="jadval">
+<h2>Qoʻngʻiroq jadvali</h2>
+<div class="scroll"><table>
+<thead><tr><th>Dars</th><th>Boshlanishi</th><th>Tugashi</th></tr></thead>
+<tbody>
+<tr><td>1-dars</td><td>08:00</td><td>08:45</td></tr>
+<tr><td>2-dars</td><td>08:55</td><td>09:40</td></tr>
+<tr><td>3-dars</td><td>09:50</td><td>10:35</td></tr>
+<tr><td>4-dars</td><td>10:55</td><td>11:40</td></tr>
+<tr><td>5-dars</td><td>11:50</td><td>12:35</td></tr>
+<tr><td>6-dars</td><td>12:45</td><td>13:30</td></tr>
+</tbody></table></div>
+<p style="color:var(--muted);font-size:15px;margin-top:12px">Vaqtlar namuna. Maktabning haqiqiy jadvaliga qarab oʻzgartiring.</p>
+</section>
+
+<section id="yangilik">
+<h2>Yangiliklar</h2>
+<div class="grid news">
+<div class="card"><time>[sana]</time><h3>Yangi oʻquv yili boshlandi</h3><p>Oʻquvchilar va ustozlar yangi oʻquv yilini bayram bilan kutib oldi.</p></div>
+<div class="card"><time>[sana]</time><h3>Fan olimpiadasi natijalari</h3><p>Maktab oʻquvchilari tuman bosqichida ishtirok etdi.</p></div>
+<div class="card"><time>[sana]</time><h3>Ota-onalar yigʻilishi</h3><p>Choraklik natijalar va yangi vazifalar muhokama qilinadi.</p></div>
+</div>
+</section>
+
+<section id="fanlar">
+<h2>Oʻquv fanlari</h2>
+<ul class="chips"><li>Ona tili va adabiyot</li><li>Matematika</li><li>Fizika</li><li>Kimyo</li><li>Biologiya</li><li>Tarix</li><li>Geografiya</li><li>Informatika</li><li>Ingliz tili</li><li>Rus tili</li><li>Jismoniy tarbiya</li><li>Tasviriy sanʼat</li><li>Musiqa</li><li>Texnologiya</li></ul>
+<p class="note" style="margin-top:14px">Fanlar roʻyxati sinflarga qarab oʻzgaradi.</p>
+</section>
+
+<section id="rahbariyat">
+<h2>Rahbariyat</h2>
+<div class="msg">
+<p><strong>Direktor murojaati</strong></p>
+<p>Aziz ota-onalar va oʻquvchilar! Maktabimiz har bir bolaning qobiliyatini ochishga, unga bilim va yaxshi tarbiya berishga harakat qiladi. Birgalikda ishlasak, natija albatta boʻladi.</p>
+<p class="note">[F.I.Sh.], maktab direktori</p>
+</div>
+<div class="grid">
+<div class="card"><h3>Maktab direktori</h3><p>[F.I.Sh.]<br>Qabul kuni: [kun]</p></div>
+<div class="card"><h3>Oʻquv ishlari boʻyicha oʻrinbosar</h3><p>[F.I.Sh.]<br>Qabul kuni: [kun]</p></div>
+<div class="card"><h3>Tarbiyaviy ishlar boʻyicha oʻrinbosar</h3><p>[F.I.Sh.]<br>Qabul kuni: [kun]</p></div>
+</div>
+</section>
+
+<section id="taqvim">
+<h2>Oʻquv yili taqvimi</h2>
+<ul class="tl">
+<li><b>1-sentabr</b>Bilimlar kuni, yangi oʻquv yilining boshlanishi</li>
+<li><b>1-oktabr</b>Oʻqituvchi va murabbiylar kuni</li>
+<li><b>8-dekabr</b>Konstitutsiya kuni</li>
+<li><b>21-mart</b>Navroʻz bayrami</li>
+<li><b>9-may</b>Xotira va qadrlash kuni</li>
+<li><b>May oxiri</b>Oxirgi qoʻngʻiroq</li>
+</ul>
+<p class="note">Sanalar namuna. Maktabning yillik rejasiga qarab moslang.</p>
+</section>
+
+<section id="qabul">
+<h2>Birinchi sinfga qabul</h2>
+<ol class="steps">
+<li><b>Ariza berish</b>Ota-ona yoki vasiy maktab maʼmuriyatiga ariza topshiradi.</li>
+<li><b>Hujjatlarni topshirish</b>Odatda tugʻilganlik haqida guvohnoma nusxasi, tibbiy maʼlumotnoma va fotosurat soʻraladi.</li>
+<li><b>Sinfga yozilish</b>Hujjatlar qabul qilingach, bola sinfga yoziladi va sinf rahbari bilan tanishtiriladi.</li>
+</ol>
+<p class="note">Hujjatlarning aniq roʻyxati va muddatlarini maktab maʼmuriyatidan soʻrab aniqlang.</p>
+</section>
+
+<section id="savollar">
+<h2>Savol va javoblar</h2>
+<details><summary>Darslar soat nechada boshlanadi?</summary><p>Aniq vaqtlar yuqoridagi qoʻngʻiroq jadvalida koʻrsatilgan.</p></details>
+<details><summary>Farzandim kasal boʻlib qolsa nima qilish kerak?</summary><p>Shu kuni sinf rahbariga xabar bering. Qaytgach, shifokor maʼlumotnomasini topshiring.</p></details>
+<details><summary>Baholarni qayerdan bilaman?</summary><p>Baholar kundalikda yoziladi, sinf rahbaridan ham soʻrashingiz mumkin. Elektron kundalik havolasi: [havola].</p></details>
+<details><summary>Toʻgarakka qanday yozilaman?</summary><p>Sinf rahbariga yoki toʻgarak rahbariga murojaat qiling.</p></details>
+</section>
+
+<section class="contact" id="aloqa"><div class="in">
+<div>
+<h2>Aloqa</h2>
+<p>Qabul, hujjatlar va boshqa savollar boʻyicha maktab maʼmuriyatiga murojaat qiling.</p>
+</div>
+<dl>
+<dt>Manzil</dt><dd>[maktab manzili]</dd>
+<dt>Telefon</dt><dd><a href="tel:+998000000000">+998 00 000 00 00</a></dd>
+<dt>Elektron pochta</dt><dd><a href="mailto:maktab46@example.uz">maktab46@example.uz</a></dd>
+<dt>Qabul vaqti</dt><dd>Dushanba–Juma, 09:00–17:00</dd>
+</dl>
+</div></section>
+
+<footer>© <span id="y">2026</span> 46-umumiy oʻrta taʼlim maktabi</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
